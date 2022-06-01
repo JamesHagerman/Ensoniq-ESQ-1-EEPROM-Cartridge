@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/2021-04-23_03-30-04/footprints.pretty)(options "")(descr ""))
+  (lib (name ensoniq-cartridge)(type KiCad)(uri ${KIPRJMOD}/ensoniq-cartridge.pretty)(options "")(descr ""))
+  (lib (name footprints-smd)(type KiCad)(uri ${KIPRJMOD}/2021-04-23_06-55-02/footprints.pretty)(options "")(descr ""))
+  (lib (name extracted-footprints)(type KiCad)(uri ${KIPRJMOD}/extracted-footprints.pretty)(options "")(descr ""))
+)
