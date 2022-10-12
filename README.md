@@ -23,6 +23,23 @@ Unpopulated PCB's can be ordered from the ZenSynth store on Tindie:
 
 https://www.tindie.com/products/zensynth/oshdiy-ensoniq-esq-1sq-80-eeprom-cartridge/
 
+## BOM?
+
+I don't follow an exact Bill of Materials, but I exported this from my Mouser project.
+
+NOTE: Please make sure you check which EEPROM you're ordering! You only need one!
+
+```
+ENSONIQ ESQ-1/SQ-80 EEPROM CARTRIDGE									
+Mouser #	Mfr. #	Manufacturer	Customer #	Description	RoHS	Lifecycle	Order Qty.	Price (USD)	Ext.: (USD)
+556-AT28C64B15PU	AT28C64B-15PU	Microchip		EEPROM 64K 8K x 8 150 ns 4.5V-5.5V	RoHS Compliant		1	$5.84	$5.84
+556-AT28C25615PU	AT28C256-15PU	Microchip		EEPROM 256K 32K x 8 150 ns 4.5V-5.5V	RoHS Compliant		1	$12.33	$12.33
+652-4607X-1LF-4.7K	4607X-101-472LF	Bourns		Resistor Networks & Arrays 7pins 4.7Kohms Bussed	RoHS Compliant By Exemption		2	$0.47	$0.94
+594-K103J20C0GH53H5G	K103J20C0GH53H5G	Vishay		Multilayer Ceramic Capacitors MLCC - Leaded 100V 10nF 5% C0G e3 Auto	RoHS Compliant		1	$0.75	$0.75
+279-LR1F3K3	LR1F3K3	TE Connectivity		Metal Film Resistors - Through Hole 3.3KOhm 3/5W 50PPM	RoHS Compliant		2	$0.16	$0.32
+571-1-2199299-2	1-2199299-2	TE Connectivity		IC & Component Sockets 28P DIP SKT 600 CL LADDER	RoHS Compliant		1	$0.67	$0.67
+```
+
 ## Additional Resources
 
 A very special thanks to Rainer Buchty for his help bringing this project to life! Thank you for the chats and resources!
