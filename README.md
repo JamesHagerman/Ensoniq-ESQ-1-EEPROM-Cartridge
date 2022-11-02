@@ -35,7 +35,7 @@ Enclosures can be 3D printed using the STL files provided in this repo. I had go
 
 I don't follow an exact Bill of Materials, but I exported this from my Mouser project.
 
-NOTE: Please make sure you check which EEPROM you're ordering! You only need one!
+*Note: Please make sure you check which EEPROM you're ordering! You only need one but two are listed below!*
 
 ```
 ENSONIQ ESQ-1/SQ-80 EEPROM CARTRIDGE									
@@ -47,6 +47,8 @@ Mouser #	Mfr. #	Manufacturer	Customer #	Description	RoHS	Lifecycle	Order Qty.	Pr
 279-LR1F3K3	LR1F3K3	TE Connectivity		Metal Film Resistors - Through Hole 3.3KOhm 3/5W 50PPM	RoHS Compliant		2	$0.16	$0.32
 571-1-2199299-2	1-2199299-2	TE Connectivity		IC & Component Sockets 28P DIP SKT 600 CL LADDER	RoHS Compliant		1	$0.67	$0.67
 ```
+
+*Additional Note: These EEPROM's have been hit by the component shortage. Atmel EEPROM chips would be ideal, but the part only really need to be pin compatible 28c64/28c256 EEPROM's. Check Jameco's stock if you can't find any from your normal supplier! They have a good history of keeping 'em on the shelves. (i.e. https://www.jameco.com/z/28C256-25-Major-Brands-IC-28C256-25IC-EEPROM-256K-Bit-CMOS-Parallel_74878.html)*
 
 ## Initialization Steps
 
