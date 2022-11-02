@@ -48,7 +48,7 @@ Mouser #	Mfr. #	Manufacturer	Customer #	Description	RoHS	Lifecycle	Order Qty.	Pr
 571-1-2199299-2	1-2199299-2	TE Connectivity		IC & Component Sockets 28P DIP SKT 600 CL LADDER	RoHS Compliant		1	$0.67	$0.67
 ```
 
-*Additional Note: These EEPROM's have been hit by the component shortage. Atmel EEPROM chips would be ideal, but the part only really need to be pin compatible 28c64/28c256 EEPROM's. Check Jameco's stock if you can't find any from your normal supplier! They have a good history of keeping 'em on the shelves. (i.e. https://www.jameco.com/z/28C256-25-Major-Brands-IC-28C256-25IC-EEPROM-256K-Bit-CMOS-Parallel_74878.html)*
+*Additional Note: These EEPROM's have been hit by the component shortage. Microchip/Atmel EEPROM chips would be ideal, but the part only really need to be pin compatible 28c64/28c256 EEPROM's. Check Jameco's stock if you can't find any from your normal supplier! They have a good history of keeping 'em on the shelves. (i.e. https://www.jameco.com/z/28C256-25-Major-Brands-IC-28C256-25IC-EEPROM-256K-Bit-CMOS-Parallel_74878.html)*
 
 ## Initialization Steps
 
