@@ -27,6 +27,8 @@ Or on Reverb:
 
 https://reverb.com/item/62807297-ensoniq-esq-1-sq-80-eeprom-cartridge-pcb-direct-from-pcb-designer
 
+*Please note: I am NOT affiliated with the seller named Mono Tanz on Reverb! They have listed my boards but have not included complete details about the open source nature of the project. Interactions with that seller are outside of my purview and I can not provide support in any way for items acquired by that seller.*
+
 Enclosures can be 3D printed using the STL files provided in this repo. I had good luck printing the cartriges in PETG on a Prusa i3 mk3. I no longer have access to a 3D printer though so can not provide completed enclosures on either Tindie or Reverb. Sorry!
 
 ## BOM?
