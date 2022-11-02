@@ -17,11 +17,15 @@ The cartridge can also be configured as a "read-only" cartridge with some reduci
 
 The current 3D printed enclosure design is provided as a Fusion 360 file. The two halves of the case are inteded to be held together either using a press fit or with clear packing tape. Not elegant, but it works.
 
-## Where can I purcahse one?
+## Where can I purchase one?
 
 Unpopulated PCB's can be ordered from the ZenSynth store on Tindie: 
 
 https://www.tindie.com/products/zensynth/oshdiy-ensoniq-esq-1sq-80-eeprom-cartridge/
+
+Or on Reverb:
+
+https://reverb.com/item/62807297-ensoniq-esq-1-sq-80-eeprom-cartridge-pcb-direct-from-pcb-designer
 
 ## BOM?
 
@@ -38,6 +42,19 @@ Mouser #	Mfr. #	Manufacturer	Customer #	Description	RoHS	Lifecycle	Order Qty.	Pr
 594-K103J20C0GH53H5G	K103J20C0GH53H5G	Vishay		Multilayer Ceramic Capacitors MLCC - Leaded 100V 10nF 5% C0G e3 Auto	RoHS Compliant		1	$0.75	$0.75
 279-LR1F3K3	LR1F3K3	TE Connectivity		Metal Film Resistors - Through Hole 3.3KOhm 3/5W 50PPM	RoHS Compliant		2	$0.16	$0.32
 571-1-2199299-2	1-2199299-2	TE Connectivity		IC & Component Sockets 28P DIP SKT 600 CL LADDER	RoHS Compliant		1	$0.67	$0.67
+```
+
+## Initialization Steps
+
+After assembly, you have to "initialize" the cartridge before using it. You can do this by saving the synths internal patches to EEPROM. Here are some steps:
+
+```
+    Power up the synth
+    Plug in the cartridge
+    Press “STORAGE”
+    Press the button under “CARTRIDGE”
+    Press the button for “INT TO CART A” or “INT TO CART B”
+    Press the button for “YES”
 ```
 
 ## Additional Resources
