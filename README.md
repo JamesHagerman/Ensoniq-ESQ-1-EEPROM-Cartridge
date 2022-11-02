@@ -27,6 +27,8 @@ Or on Reverb:
 
 https://reverb.com/item/62807297-ensoniq-esq-1-sq-80-eeprom-cartridge-pcb-direct-from-pcb-designer
 
+Enclosures can be 3D printed using the STL files provided in this repo. I had good luck printing the cartriges in PETG on a Prusa i3 mk3. I no longer have access to a 3D printer though so can not provide completed enclosures on either Tindie or Reverb. Sorry!
+
 ## BOM?
 
 I don't follow an exact Bill of Materials, but I exported this from my Mouser project.
