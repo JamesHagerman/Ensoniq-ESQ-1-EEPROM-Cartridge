@@ -22,7 +22,7 @@ Designed and tested by James.Hagerman@gmail.com (@jamisnemo) https://zenpirate.c
 Text Notes 7290 7230 0    50   ~ 0
 1  1
 Text Notes 10600 7650 0    50   ~ 0
-3.0.1
+3.0.2
 $Comp
 L power:VCC #PWR010
 U 1 1 61C8DFA8
@@ -156,7 +156,7 @@ F 3 "~" H 3250 6500 50  0001 C CNN
 $EndComp
 Text Notes 3000 7400 0    50   ~ 0
 Exact value of C1 does not \nmatter that much. It is for Vcc\nstabilization. Between 0.01uF\nand 20uF appear to work. 
-Text Notes 1450 2850 0    50   ~ 0
+Text Notes 750  2850 0    50   ~ 0
 The most basic cartridge uses an AT28C64 EEPROM which allows for two banks\nof 40 patches each, Cart A and Cart B.\n\nWhen using an AT28C64 EEPROM:\n- Populate EEPROM, RN1, RN2, C1\n- Omit R1, R2, R3, R4, J1\n- Leave JP1 uncut.\n\nWith extra circutry, a larger AT28C256 EEPROM can be used to allow for 8 banks of\n40 patches each.\n\nWhen using an AT28C256 EEPROM:\n\nNOTE: Please read errata section before using AT28C256 EEPROM's!\n\n- Populate EEPROM, RN1, RN2, R3, R4, C1\n- Omit R1, R2.\n- Leave JP1 uncut.\n- Connect 2x toggle switches to J1 (see comments and Errata in "Expanded configuration" box)\n- Do NOT short J1 pin 2 to VCC at any time!\n\nIn this configuration, the toggle switches select which set of 2 banks to expose to the synth.\n(i.e. 00, 01, 10, 11 to select 1 of 4 sets of 2 banks) \n\nAfter toggling either bank select toggle switch, select "Internal", then "Cart A" or "Cart B" on\nthe synth to re-load patches from the selected memory region.
 Text Notes 6900 2350 0    50   ~ 0
 Expanded configuration (optional, requires AT28C256 EEPROM)\n\nPins on J1 are not labeled well. The "VCC" label is closest to pin 1:\nJ1   4 3 2 1   VCC\n\nToggle switches should go between:\n- Pin 4 and VCC\n- Pin 3 and VCC\n- Do NOT short Pin 2 to VCC!
@@ -679,4 +679,14 @@ Wire Notes Line
 	11050 5600 6650 5600
 Wire Notes Line
 	6650 1450 11050 1450
+Text Notes 4300 1500 0    50   ~ 0
+IMPORTANT:\nThe assembled cartridge must be initialized before use!\n\nPower up the synth\nPlug in the cartridge\nPress "STORAGE"\nPress the button under "CARTRIDGE"\nPress the button for "INT TO CART A"\nPress the button for "YES"\nRepeat for "INT TO CART B"
+Wire Notes Line style solid rgb(255, 0, 0)
+	4200 650  6500 650 
+Wire Notes Line style solid rgb(255, 0, 0)
+	6500 1550 4200 1550
+Wire Notes Line style solid rgb(255, 0, 0)
+	6500 650  6500 1550
+Wire Notes Line style solid rgb(255, 0, 0)
+	4200 650  4200 1550
 $EndSCHEMATC
