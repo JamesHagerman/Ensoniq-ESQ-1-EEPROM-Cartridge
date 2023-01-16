@@ -22,7 +22,7 @@ Designed and tested by James.Hagerman@gmail.com (@jamisnemo) https://zenpirate.c
 Text Notes 7290 7230 0    50   ~ 0
 1  1
 Text Notes 10600 7650 0    50   ~ 0
-3.0.3
+3.1.0
 $Comp
 L power:VCC #PWR010
 U 1 1 61C8DFA8
@@ -100,74 +100,74 @@ $EndComp
 $Comp
 L power:GND #PWR015
 U 1 1 619ECD45
-P 3050 6550
-F 0 "#PWR015" H 3050 6300 50  0001 C CNN
-F 1 "GND" H 3055 6377 50  0000 C CNN
-F 2 "" H 3050 6550 50  0001 C CNN
-F 3 "" H 3050 6550 50  0001 C CNN
-	1    3050 6550
+P 3050 6750
+F 0 "#PWR015" H 3050 6500 50  0001 C CNN
+F 1 "GND" H 3055 6577 50  0000 C CNN
+F 2 "" H 3050 6750 50  0001 C CNN
+F 3 "" H 3050 6750 50  0001 C CNN
+	1    3050 6750
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR014
 U 1 1 61A281F1
-P 3050 5950
-F 0 "#PWR014" H 3050 5800 50  0001 C CNN
-F 1 "VCC" H 3065 6123 50  0000 C CNN
-F 2 "" H 3050 5950 50  0001 C CNN
-F 3 "" H 3050 5950 50  0001 C CNN
-	1    3050 5950
+P 3050 6150
+F 0 "#PWR014" H 3050 6000 50  0001 C CNN
+F 1 "VCC" H 3065 6323 50  0000 C CNN
+F 2 "" H 3050 6150 50  0001 C CNN
+F 3 "" H 3050 6150 50  0001 C CNN
+	1    3050 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 6450 3050 6550
-Text GLabel 4100 6000 2    50   Input ~ 0
+	3050 6650 3050 6750
+Text GLabel 4100 6200 2    50   Input ~ 0
 CE-c30
 $Comp
 L Device:R R1
 U 1 1 61C0DCD2
-P 3800 6000
-F 0 "R1" H 3870 6046 50  0000 L CNN
-F 1 "DNP" H 3870 5955 50  0000 L CNN
-F 2 "extracted-footprints:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3730 6000 50  0001 C CNN
-F 3 "~" H 3800 6000 50  0001 C CNN
-	1    3800 6000
+P 3800 6200
+F 0 "R1" H 3870 6246 50  0000 L CNN
+F 1 "DNP" H 3870 6155 50  0000 L CNN
+F 2 "extracted-footprints:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3730 6200 50  0001 C CNN
+F 3 "~" H 3800 6200 50  0001 C CNN
+	1    3800 6200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3950 6000 4100 6000
+	3950 6200 4100 6200
 $Comp
 L Device:C C1
 U 1 1 6082B26E
-P 3050 6300
-F 0 "C1" H 3165 6346 50  0000 L CNN
-F 1 "0.01uF" H 3165 6255 50  0000 L CNN
-F 2 "extracted-footprints:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 3088 6150 50  0001 C CNN
-F 3 "~" H 3050 6300 50  0001 C CNN
-	1    3050 6300
+P 3050 6500
+F 0 "C1" H 3165 6546 50  0000 L CNN
+F 1 "DNP" H 3165 6455 50  0000 L CNN
+F 2 "extracted-footprints:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 3088 6350 50  0001 C CNN
+F 3 "~" H 3050 6500 50  0001 C CNN
+	1    3050 6500
 	1    0    0    -1  
 $EndComp
-Text Notes 3000 5600 0    50   ~ 0
-The exact value of the Vcc stabilization capacitor, C1, does not seem\nto matter much. It present on the OEM cartridges so it was kept.\nBetween 0.01uF and 20uF appear to work. Your millage may vary.
+Text Notes 3000 5800 0    50   ~ 0
+Errata: C1 appears to cause stability issues on some synths!\n\nIt was present on the OEM cartridges so it was kept.\nIf you notice stability issues without C1, please consider populating\nit. Values between 0.01uF and 20uF may work. Your millage may vary.
 Text Notes 850  2950 0    50   ~ 0
-Assembly Notes\n \nNOTE: Please read errata before assembly!\n\nThe most basic cartridge uses an AT28C64 EEPROM which allows for two banks\nof 40 patches each, Cart A and Cart B.\n\nWith extra circutry, a larger AT28C256 EEPROM can be used to allow for 8 banks of\n40 patches each.\n\nIn this larger configuration, toggle switches select which set of 2 banks to expose\nto the synth. (i.e. 00, 01, 10, 11 to select 1 of 4 sets of 2 banks) After toggling either\nbank select toggle switch, select "Internal", then "Cart A" or "Cart B" on the synth\nto re-load patches from the selectedp memory region.\n\nWhen using an AT28C64 EEPROM:\n- Populate EEPROM, RN1, RN2, C1\n- Omit R1, R2, R3, R4, J1\n- Leave JP1 uncut.\n\nWhen using an AT28C256 EEPROM:\n- Populate EEPROM, RN1, RN2, R3, R4, C1\n- Omit R1, R2.\n- Leave JP1 uncut.\n- Connect 2x toggle switches to J1 (see "Expanded Configuration Notes")\n- Do NOT short J1 pin 2 to VCC at any time!\n\n
+Assembly Notes\n \nNOTE: Please read errata before assembly!\n\nThe most basic cartridge uses an AT28C64 EEPROM which allows for two banks\nof 40 patches each, Cart A and Cart B.\n\nWith extra circutry, a larger AT28C256 EEPROM can be used to allow for 8 banks of\n40 patches each.\n\nIn this larger configuration, toggle switches select which set of 2 banks to expose\nto the synth. (i.e. 00, 01, 10, 11 to select 1 of 4 sets of 2 banks) After toggling either\nbank select toggle switch, select "Internal", then "Cart A" or "Cart B" on the synth\nto re-load patches from the selectedp memory region.\n\nWhen using an AT28C64 EEPROM:\n- Populate EEPROM, RN1, RN2\n- Omit R1, R2, R3, R4, J1, C1\n- Leave JP1 uncut.\n\nWhen using an AT28C256 EEPROM:\n- Populate EEPROM, RN1, RN2, R3, R4\n- Omit R1, R2, C1\n- Leave JP1 uncut.\n- Connect 2x toggle switches to J1 (see "Expanded Configuration Notes")\n- Do NOT short J1 pin 2 to VCC at any time!
 Text Notes 7000 2200 0    50   ~ 0
 Expanded Configuration Notes\n\nWiring the togggle switches when using large EEPROMs can be a bit confusing.\n\nPins numbers on J1 are not labeled well. The "VCC" label is closest to pin 1, i.e.:\nJ1   4 3 2 1   VCC\n\nToggle switches should go between:\n- Pin 4 and VCC\n- Pin 3 and VCC\n- Do NOT short Pin 2 to VCC!
 $Comp
 L power:GND #PWR01
 U 1 1 61D3CCC9
-P 8950 5100
-F 0 "#PWR01" H 8950 4850 50  0001 C CNN
-F 1 "GND" H 8955 4927 50  0000 C CNN
-F 2 "" H 8950 5100 50  0001 C CNN
-F 3 "" H 8950 5100 50  0001 C CNN
-	1    8950 5100
+P 8450 4950
+F 0 "#PWR01" H 8450 4700 50  0001 C CNN
+F 1 "GND" H 8455 4777 50  0000 C CNN
+F 2 "" H 8450 4950 50  0001 C CNN
+F 3 "" H 8450 4950 50  0001 C CNN
+	1    8450 4950
 	1    0    0    -1  
 $EndComp
-Text GLabel 8100 4950 0    50   Input ~ 0
+Text GLabel 7600 4800 0    50   Input ~ 0
 CPRES-c24
 Wire Wire Line
-	8950 4950 8950 5100
+	8450 4800 8450 4950
 Wire Wire Line
 	2300 4700 3100 4700
 Wire Wire Line
@@ -464,20 +464,20 @@ $EndComp
 $Comp
 L Jumper:SolderJumper_2_Bridged JP1
 U 1 1 6209B6FC
-P 8500 4950
-F 0 "JP1" H 8500 5155 50  0000 C CNN
-F 1 "SolderJumper_2_Bridged" H 8500 5064 50  0000 C CNN
-F 2 "extracted-footprints:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 8500 4950 50  0001 C CNN
-F 3 "~" H 8500 4950 50  0001 C CNN
-	1    8500 4950
+P 8000 4800
+F 0 "JP1" H 8000 5005 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 8000 4914 50  0000 C CNN
+F 2 "extracted-footprints:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 8000 4800 50  0001 C CNN
+F 3 "~" H 8000 4800 50  0001 C CNN
+	1    8000 4800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8100 4950 8250 4950
+	7600 4800 7750 4800
 Wire Wire Line
-	8650 4950 8950 4950
-Text Notes 7000 4650 0    50   ~ 0
-Errata:\n*/CPRES circuit is incorrect!* - It is safer to reload patches using buttons\non the synth than it is to rework this section of the board.\n\n1. Do NOT cut JP1\n2. Do NOT short J1 pin 2 (/CPRES) to VCC at ANY time\n3. Ignore R2
+	8150 4800 8450 4800
+Text Notes 7050 4400 0    50   ~ 0
+Errata: Cartridge presence circuit (/CPRES) is incorrect!\n\n1. Do not cut JP1\n2. Do not populate R2\n3. Do NOT short J1 pin 2 (/CPRES) to VCC at ANY time
 Text Notes 4450 2750 0    50   ~ 0
 IMPORTANT:\nThe assembled cartridge must be initialized before use!\n\nPower up the synth\nPlug in the cartridge\nPress "STORAGE"\nPress the button under "CARTRIDGE"\nPress the button for "INT TO CART A"\nPress the button for "YES"\nRepeat for "INT TO CART B"
 Wire Notes Line style solid rgb(255, 0, 0)
@@ -489,22 +489,22 @@ Wire Notes Line style solid rgb(255, 0, 0)
 Wire Notes Line style solid rgb(255, 0, 0)
 	4350 1900 4350 2800
 Wire Wire Line
-	3050 5950 3050 6000
+	3050 6150 3050 6200
 Wire Wire Line
-	3650 6000 3050 6000
-Connection ~ 3050 6000
+	3650 6200 3050 6200
+Connection ~ 3050 6200
 Wire Wire Line
-	3050 6000 3050 6150
-Text Notes 3950 6400 0    50   ~ 0
+	3050 6200 3050 6350
+Text Notes 3950 6600 0    50   ~ 0
 For a read-only cartridge (pre-programmed EEPROM only):\n- Omit RN1 and RN2 resistor networks\n- Populate R1 with a 3.3k resistor
 Wire Notes Line
-	3550 5850 3550 6450
+	3550 6050 3550 6650
 Wire Notes Line
-	3550 6450 6300 6450
+	3550 6650 6300 6650
 Wire Notes Line
-	6300 6450 6300 5850
+	6300 6650 6300 6050
 Wire Notes Line
-	6300 5850 3550 5850
+	6300 6050 3550 6050
 Wire Wire Line
 	10200 2050 10200 2200
 Wire Wire Line
@@ -656,36 +656,36 @@ F 3 "~" H 8050 3100 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8250 5400 8250 5550
+	7750 5250 7750 5400
 Wire Wire Line
-	8250 4950 8250 5100
+	7750 4800 7750 4950
 $Comp
 L Device:R R2
 U 1 1 628BBAEB
-P 8250 5250
-F 0 "R2" H 8320 5296 50  0000 L CNN
-F 1 "3.3k" H 8320 5205 50  0000 L CNN
-F 2 "extracted-footprints:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8180 5250 50  0001 C CNN
-F 3 "~" H 8250 5250 50  0001 C CNN
-	1    8250 5250
+P 7750 5100
+F 0 "R2" H 7820 5146 50  0000 L CNN
+F 1 "3.3k" H 7820 5055 50  0000 L CNN
+F 2 "extracted-footprints:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 7680 5100 50  0001 C CNN
+F 3 "~" H 7750 5100 50  0001 C CNN
+	1    7750 5100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 628BB7F5
-P 8250 5550
-F 0 "#PWR0101" H 8250 5300 50  0001 C CNN
-F 1 "GND" H 8255 5377 50  0000 C CNN
-F 2 "" H 8250 5550 50  0001 C CNN
-F 3 "" H 8250 5550 50  0001 C CNN
-	1    8250 5550
+P 7750 5400
+F 0 "#PWR0101" H 7750 5150 50  0001 C CNN
+F 1 "GND" H 7755 5227 50  0000 C CNN
+F 2 "" H 7750 5400 50  0001 C CNN
+F 3 "" H 7750 5400 50  0001 C CNN
+	1    7750 5400
 	1    0    0    -1  
 $EndComp
 Text GLabel 9200 2850 0    50   Input ~ 0
 A13-optional
-Connection ~ 8250 4950
+Connection ~ 7750 4800
 Wire Wire Line
-	8250 4950 8350 4950
+	7750 4800 7850 4800
 Wire Notes Line
 	6950 1250 6950 3750
 Wire Notes Line
@@ -695,11 +695,23 @@ Wire Notes Line
 Wire Notes Line
 	10900 1250 6950 1250
 Wire Notes Line
-	6950 4050 6950 5800
+	6950 3900 6950 5650
 Wire Notes Line
-	6950 5800 10000 5800
+	2900 5350 2900 7050
 Wire Notes Line
-	10000 5800 10000 4050
+	2900 7050 3350 7050
 Wire Notes Line
-	10000 4050 6950 4050
+	3350 7050 3350 5900
+Wire Notes Line
+	3350 5900 5800 5900
+Wire Notes Line
+	5800 5900 5800 5350
+Wire Notes Line
+	5800 5350 2900 5350
+Wire Notes Line
+	6950 5650 9300 5650
+Wire Notes Line
+	9300 5650 9300 3900
+Wire Notes Line
+	9300 3900 6950 3900
 $EndSCHEMATC

@@ -50,6 +50,10 @@ Mouser #	Mfr. #	Manufacturer	Customer #	Description	RoHS	Lifecycle	Order Qty.	Pr
 
 *Additional Note: These EEPROM's have been hit by the component shortage. Microchip/Atmel EEPROM chips would be ideal, but the part only really need to be pin compatible 28c64/28c256 EEPROM's. Check Jameco's stock if you can't find any from your normal supplier! They have a good history of keeping 'em on the shelves. (i.e. https://www.jameco.com/z/28C256-25-Major-Brands-IC-28C256-25IC-EEPROM-256K-Bit-CMOS-Parallel_74878.html)*
 
+## Assembly Instructions?
+
+Instructions to assembly the board can be found in the `assembly-notes-and-schematic-vX.X.X.pdf` file in the root directory of this repo.
+
 ## Initialization Steps
 
 After assembly, you have to "initialize" the cartridge before using it. You can do this by saving the synths internal patches to EEPROM. Here are some steps:
@@ -62,6 +66,23 @@ After assembly, you have to "initialize" the cartridge before using it. You can 
     Press the button for “INT TO CART A” or “INT TO CART B”
     Press the button for “YES”
 ```
+## Errata
+
+### Writes are unstable
+
+If you are having issues initializing the cartridge or writing patches to the cartridge, *please consider removing `C1` from the board and try the initialization process again.*
+
+Other builders ran into stability issues and helped greatly in identifying potential fixes (Thanks Ivan!). This was somewhat difficult to track down due to the age and various condition of people's Ensoniq synths.
+
+### Cartridge detect circuitry is incorrect
+
+As noted in the errata section of the schematic PDF, please (i.e. do not populate) R2, do not cut JP1, and do not short Pin 2 of J1 to Vcc at any time.
+
+There are no good examples of the associated `CPRES` line being used effectively on other cartridges and I didn't do enough testing before getting boards assembled. I'll remove these components if another run of boards ends up happening.
+
+## I'm stuck. How do I get help?
+
+If you purchased the board from me, you should have my contact information. Otherwise, please consider opening a new [GitHub issue](https://github.com/JamesHagerman/Ensoniq-ESQ-1-EEPROM-Cartridge/issues) including additional context about where you're stuck. I'll do my best to help! 
 
 ## Additional Resources
 
