@@ -1,6 +1,6 @@
 # Ensoniq ESQ-1 EEPROM Cartridge
 
-This repo contains an open source hardware design for a EEPROM-based patch storage cartridge for the Ensoniq ESQ-1 and SQ-80 hybrid synthesizers.
+This repo contains an open source hardware design for a EEPROM-based patch storage cartridge for the Ensoniq ESQ-1 and SQ-80 hybrid synthesizers..
 
 ![A photo of the assembled EEPROM cartridge PCB and two halves of the 3D printed enclosure](assembled-cartridge-small.jpg)
 
